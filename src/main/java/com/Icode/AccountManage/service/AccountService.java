@@ -67,7 +67,7 @@ public class AccountService implements IAccountService {
             session.setAttribute("ACCOUNTID",account.getID());
             session.setAttribute("USERID",account.getUserID());
             session.setAttribute("LOGINNAME",account.getLoginName());
-            if ("on".equals(rememberMe)) {
+           /* if ("on".equals(rememberMe)) {
                 //创建两个Cookie对象
                 Cookie nameCookie = new Cookie("userName", userName);
                 //设置Cookie的有效期为3天
@@ -76,7 +76,7 @@ public class AccountService implements IAccountService {
                 pwdCookie.setMaxAge(60 * 60 * 24 * 30);
                 response.addCookie(nameCookie);
                 response.addCookie(pwdCookie);
-            }
+            }*/
             return 1;
         } else {
             return -1;
